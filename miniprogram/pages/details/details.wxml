@@ -1,0 +1,39 @@
+
+    <view class="container">
+      <view class="header">
+        <view class="header-container">
+          <view class="t">左</view>
+        <view class="h">
+          <view class="title">账单详情</view>
+          <view class="icon">删除</view>
+        </view>
+        <view class="c">
+          <view class="icon">icon</view>
+          <view class="content">
+            <view class="left">
+              <view class="title"><span>餐饮</span><span>-</span><span>精致下午茶</span></view>
+              <view class="time">2019.12.14 18：28</view>
+            </view>
+            <view class="right">-￥169</view>
+          </view>
+        </view>
+        </view>
+      </view>
+      <view class="details">
+       <view class="details-container">
+        <view class="row">
+          <view class="label">账本类型</view>
+          <view class="value">普通账单</view>
+        </view>
+        <view class="row">
+          <view class="label">记账人</view>
+          <view class="value">于丹</view>
+        </view>
+        <view class="row">
+          <view class="label">备注</view>
+          <view class="value">人是铁饭是钢一顿不吃饿得慌</view>
+        </view>
+       </view>
+      </view>
+      <view class="btn"><view>编辑账单</view></view>
+    </view>

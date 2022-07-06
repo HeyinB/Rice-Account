@@ -17,5 +17,13 @@ Component({
     /**
      * 组件的方法列表
      */
-    methods: {}
+    methods: {
+        toDetailPage({ target }) {
+            let id = target.dataset.id;
+            console.log(id)
+            wx.navigateTo({
+                url: `../../pages/details/details?id=${id}`
+            })
+        }
+    }
 })
