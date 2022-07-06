@@ -1,0 +1,54 @@
+.container {
+    height: 100%;
+}
+
+.ledger-title {
+    position: relative;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    font-size: 35rpx;
+    font-weight: bold;
+    color: var(--haoyuebai--);
+    background-color: var(--bicheng--);
+    border-bottom-right-radius: 109rpx;
+}
+
+.ledger-title::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 60rpx;
+    transform: translateY(-50%);
+    width: 35rpx;
+    height: 35rpx;
+    background-color: var(--haoyuebai--);
+    border-radius: 50%;
+}
+
+.bg-top {
+    background-color: var(--haoyuebai--);
+}
+
+.bg-bt {
+    background-color: var(--bicheng--);
+}
+
+.ledger-ledgers {
+    height: calc(100vh - 100rpx);
+    padding: 35rpx;
+    border-top-left-radius: 109rpx;
+    background-color: var(--haoyuebai--);
+}
+
+.scrollView {
+    height: calc(100vh - 100rpx - 70rpx);
+}
+
+.ledger-item {
+    height: 180rpx;
+    padding: 20rpx;
+    margin: 10rpx;
+    background-color: var(--bicheng--);
+    border-radius: 30rpx;
+}

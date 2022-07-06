@@ -1,0 +1,24 @@
+/* pages/bookkeeping/bookkeeping.wxss */
+
+.iconfont {
+    font-size: var(--m-font--);
+}
+
+.icon-box {
+    /* width: 100rpx; */
+    height: 100vh;
+}
+
+.icon-img {
+    width: 100rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    background-color: #66ccff;
+    border-radius: 50%;
+}
+
+.icon-text {
+    width: 100rpx;
+    text-align: center;
+}

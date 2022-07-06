@@ -1,0 +1,19 @@
+{
+    "pages": [
+        "pages/home/home",
+        "pages/statistics/statistics",
+        "pages/ledger/ledger",
+        "pages/bookkeeping/bookkeeping",
+        "components/DateStatistics/DateStatistics",
+        "components/LedgerCard"
+    ],
+    "window": {
+        "backgroundColor": "#39C5BB",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#F6F6F6",
+        "navigationBarTextStyle": "black",
+        "navigationStyle": "default"
+    },
+    "sitemapLocation": "sitemap.json",
+    "style": "v2"
+}

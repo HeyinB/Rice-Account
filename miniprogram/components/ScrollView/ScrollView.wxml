@@ -1,0 +1,9 @@
+<scroll-view scroll-y class="scrollView" refresher-enabled="{{true}}" refresher-threshold="{{100}}" refresher-default-style="black" refresher-background="rgba(255, 255, 255, 0)" refresher-triggered="{{triggered}}" bindrefresherrefresh="onPulling" refresher-triggered="{{istrigger}}" bindscrolltolower="tolower">
+   <view>
+    <view class="timeline" wx:for="{{BillList}}" wx:key="item">
+      <LedgerCard info="{{item}}"/>
+        
+    </view>
+  </view>
+  <view class="islow">没有更多</view>
+</scroll-view>

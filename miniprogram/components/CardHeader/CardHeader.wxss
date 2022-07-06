@@ -1,0 +1,41 @@
+.card-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-top-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-top-left .icon {
+    width: .7em;
+    height: .7em;
+    border-radius: 50%;
+    background-color: rgb(3, 165, 122);
+}
+
+.card-top-left .icon::after {
+    content: " ";
+    position: relative;
+    z-index: -1;
+    left: .5em;
+    display: block;
+    /* width:100%;
+        height:100%; */
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    background-color: rgba(3, 165, 122, .5);
+}
+
+.card-top-left .date {
+    font-weight: bold;
+    margin-left: 1em;
+}
+
+.card-top-right {
+    color: rgb(138, 135, 135);
+    font-size: .8em;
+}

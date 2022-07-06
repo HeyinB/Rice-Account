@@ -1,0 +1,13 @@
+<view style="width:100%;background-color:@f1f1f1;">
+    <view class="card">
+        <view class="card-item">
+            <view class="name">时间：</view>
+            <view class="start time">2022-03-20</view>
+            <!-- <view style="margin:0 20rpx;">~至~</view>
+            <view class="end time">2022-03-20</view> -->
+        </view>
+    </view>
+    <view class="card chart">
+        <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+    </view>
+</view>

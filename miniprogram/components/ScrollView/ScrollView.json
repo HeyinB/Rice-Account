@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "LedgerCard":"../LedgerCard/LedgerCard"
+    },
+    "styleIsolation": "apply-shared"
+}

@@ -1,0 +1,17 @@
+<view class="daily-card">
+	<view class="card-top">
+		<view class="card-top-left">
+			<view class="icon" />
+			<view class="date">{{mdata}}</view>
+		</view>
+		<view class="card-top-right">
+			<text>收 </text>
+			<text>600</text>
+			<text>，</text>
+			<text>支 </text>
+			<text>{{lumpSum}}</text>
+		</view>
+	</view>
+
+</view>
+

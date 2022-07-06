@@ -1,0 +1,39 @@
+<view wx:if="{{showBtn}}" class="input-contant">
+    <!-- {{input_height}}=========== -->
+    <view class="modal" style="bottom:{{input_height?input_height+'px':160+'rpx'}}">
+        <view style="width:100rpx">xxx备注</view>
+        <view style="flex:2;">
+            <input type="text" adjust-position="{{false}}" focus confirm-type="done" placeholder="点击写备注" model:value="{{remark}}" class="modal_input" bindfocus="bindfocusfunction" bindblur="finish_enter" bindconfirm="finish_enter" bindinput="fakeCallback"></input>
+        </view>
+        <view class="total" style="flex:1;">{{show_num}}</view>
+    </view>
+</view>
+<view class="{{isShow == 2? 'animationStyleIn':'animationStyleOut'}} keyboard">
+    <view class="input-box">
+        <view style="width:100rpx">
+            <text>xxx</text>
+            <text>备注</text>
+        </view>
+        <view style="text-align:{{remark?'right':'left'}};">
+            <input type="text" value="{{remark}}" disabled="{{true}}" placeholder="点击写备注" bindtap="clickbtn"></input>
+        </view>
+        <view class="total" style="flex:1;">{{show_num}}</view>
+    </view>
+    <view class="grid text-center col-4" bindtap="CACULATE">
+        <view class="bubble " wx:for="{{KEYBOART_DATA}}" wx:key="id">
+            <button class="btn padding" data-value="{{item.value}}" data-type="{{item.type}}" wx:if="{{item.type != 'today'}}">
+                {{item.value}}
+            </button>
+            <view class="picker_time" wx:else>
+                <picker mode="date" value="{{date}}" start="2015-09-01" end="2555-09-01" bindchange="bindDateChange">
+                    <view class="picker">{{time}}</view>
+                </picker>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="cu-load load-modal" wx:if="{{loadModal}}">
+    <!-- <view class="cuIcon-emojifill text-orange"></view> -->
+    <!-- <image src="/static/logo.png" mode="aspectFit"></image> -->
+    <view class="gray-text">加载中...</view>
+</view>

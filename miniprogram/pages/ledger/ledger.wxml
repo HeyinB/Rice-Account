@@ -1,0 +1,15 @@
+<view class="container">
+    <view class="bg-top">
+        <view class="ledger-title">我的账本</view>
+    </view>
+    <view class="bg-bt">
+        <view class="ledger-ledgers">
+            <!-- <view class="ledger-item">账本一</view> -->
+            <scroll-view scroll-y class="scrollView" refresher-enabled="{{true}}" refresher-threshold="{{100}}" refresher-default-style="black" refresher-background="rgba(255, 255, 255, 0)" refresher-triggered="{{triggered}}" bindrefresherrefresh="onPulling" refresher-triggered="{{istrigger}}" bindscrolltolower="tolower">
+                <view wx:for="{{list}}" wx:key="index" style="animation: slideInRight {{index /(index + 1)}}s;" class="ledger-item">
+                    {{item.ledgerList[0].billname}}
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,11 @@
+<view class="logo-container">
+    <view class="logo-w">
+        <view class="logo-img">
+            <image class="img" src="../../images/logo.png" mode="aspectFit" lazy-load="false" binderror="" bindload=""></image>
+        </view>
+        <view class="logo-title">米  帐</view>
+        <view class="btn">
+            <button bindtap="getUserInfo">登录</button>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,40 @@
+.card {
+    /* position: relative; */
+    overflow: hidden;
+    margin: 20rpx;
+    border-radius: 10rpx;
+    background-color: #fff;
+}
+
+.name {
+    margin: 0 40rpx;
+}
+
+.card-item {
+    padding: 20rpx;
+    display: flex;
+}
+
+.time {
+    padding: 5rpx 10rpx;
+    border: 1rpx solid #ccc;
+    border-radius: 8rpx;
+}
+
+.chart {
+    height: 600rpx;
+}
+
+
+/* .container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+} */

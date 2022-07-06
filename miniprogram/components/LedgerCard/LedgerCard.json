@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "CardHeader":"../CardHeader/CardHeader"
+    },
+    "styleIsolation": "apply-shared"
+}

@@ -1,0 +1,24 @@
+<view class="daily-card">
+	<CardHeader lumpSum="{{info.lumpSum || 0}}" mdata="{{info.mdata}}" />
+	<view class="price-content">
+		<view class="price-content-item" wx:for="{{info.list}}" wx:key="_id">
+			<view class="price-content-item-left">
+				<view class="icon iconfont {{item.iconclass}}" />
+				<view class="data">
+					<view class="title">
+						<text>{{item.iconname}}</text>
+						<text>-</text>
+						<text>{{item.remark}}</text>
+					</view>
+					<view class="time">{{item.cdata}}</view>
+				</view>
+			</view>
+			<view class="price-content-item-right">
+				<text>-{{item.price}}</text>
+			</view>
+		</view>
+
+	</view>
+
+</view>
+

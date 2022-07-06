@@ -1,0 +1,29 @@
+/**app.wxss**/
+
+@import "colorui/main.wxss";
+@import "colorui/icon.wxss";
+
+/* @import "colorui/animation.wxss"; */
+
+@import "style/animate.wxss";
+@import "style/iconfont.wxss";
+page {
+    /* --MIKU-color--: #f0f6ee;
+    --RIN-color--: #FFA500;
+    --LEN-color--: #FFC0CB; */
+    --haoyuebai--:rgb(238,247,242);
+    --bicheng--:rgb(17,78,122);
+    --bg-default-color--: #f1f1f1;
+    --white: rgba(255, 255, 255, 0);
+    --xs-font--: 20rpx;
+    --s-font--: 30rpx;
+    --m-font--: 50rpx;
+    --l-font--: 70rpx;
+}
+
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
