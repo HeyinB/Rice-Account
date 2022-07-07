@@ -1,33 +1,31 @@
 /* components/ScrollView/ScrollView.wxss */
 
 .scrollView {
-    width: 100%;
-    height: calc(100vh - 470rpx);
+  width: 100%;
+  height: calc(100vh - 300rpx);
 }
-
 
 /* 时间轴样式 */
 
 .timeline {
-    margin: 50rpx 0;
-    /* -moz-box-shadow: 0rpx 10rpx 4rpx -10rpx rgb(54, 52, 52);
+  margin: 50rpx 0;
+  /* -moz-box-shadow: 0rpx 10rpx 4rpx -10rpx rgb(54, 52, 52);
     -webkit-box-shadow: 0rpx 10rpx 4rpx -10rpx rgb(54, 52, 52);
     box-shadow: 0rpx 10rpx 4rpx -10rpx rgb(54, 52, 52); */
 }
 
 .timeline .t-data {
-    margin-left: 30rpx;
+  margin-left: 30rpx;
 }
 
 .timeline .t-content {
-    display: flex;
-    margin-bottom: 50rpx 0;
-    align-items: center;
-    width: 100%;
-    height: 120rpx;
-    line-height: 120rpx;
+  display: flex;
+  margin-bottom: 50rpx 0;
+  align-items: center;
+  width: 100%;
+  height: 120rpx;
+  line-height: 120rpx;
 }
-
 
 /* .timeline .t-content::after {
     content: "";
@@ -42,32 +40,32 @@
 } */
 
 .timeline .t-content .t-icon {
-    font-size: var(--m-font--);
-    margin-left: 20rpx;
-    flex: 1;
+  font-size: var(--m-font--);
+  margin-left: 20rpx;
+  flex: 1;
 }
 
 .t-remark {
-    flex: 6;
-    padding-right: 100rpx;
-    text-align: left;
-    font-weight: bold;
+  flex: 6;
+  padding-right: 100rpx;
+  text-align: left;
+  font-weight: bold;
 }
 
 .t-price {
-    flex: 1;
-    font-weight: bold;
+  flex: 1;
+  font-weight: bold;
 }
 
 .islow::before {
-    content: "----------"
+  content: '----------';
 }
 
 .islow {
-    text-align: center;
-    margin: 20rpx 0;
+  text-align: center;
+  margin: 20rpx 0;
 }
 
 .islow::after {
-    content: "----------"
+  content: '----------';
 }

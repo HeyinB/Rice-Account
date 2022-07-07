@@ -1,49 +1,50 @@
 /* 卡片 */
 
 .daily-card {
-    margin: 1em 1em;
+  margin: 20rpx 20rpx;
 }
 
 .price-content {
-    -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
-    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0px 0rpx 10rpx rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0rpx 0rpx 10rpx rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .price-content-item {
-    padding: .6em;
-    margin-top: 1em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  padding: 20rpx;
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .price-content-item-left {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .price-content-item-left .icon {
-    width: 2em;
-    height: 2em;
-    font-size: 1.4em;
-    text-align: center;
-    line-height: 2em;
-    color: #fff;
-    margin-right: .3em;
-    border-radius: 50%;
-    background-color: rgb(3, 165, 122);
+  width: 65rpx;
+  height: 65rpx;
+  font-size: 40rpx;
+  text-align: center;
+  line-height: 65rpx;
+  color: #fff;
+  margin-right: 20rpx;
+  border-radius: 50%;
+  background-color: rgb(3, 165, 122);
 }
 
-.price-content-item-left .data {}
+.price-content-item-left .data {
+}
 
 .price-content-item-left .data .time {
-    font-size: .7em;
-    color: #ADAEAE;
+  font-size: 23rpx;
+  color: #adaeae;
 }
 
 .price-content-item-right {
-    font-weight: bold;
-    color: rgb(3, 165, 122);
+  font-weight: bold;
+  color: rgb(3, 165, 122);
 }

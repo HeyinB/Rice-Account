@@ -2,7 +2,6 @@
     <view class="container">
       <view class="header">
         <view class="header-container">
-          <view class="t">左</view>
         <view class="h">
           <view class="title">账单详情</view>
           <view class="icon">删除</view>

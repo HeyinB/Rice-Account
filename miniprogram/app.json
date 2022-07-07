@@ -6,7 +6,7 @@
         "pages/bookkeeping/bookkeeping",
         "pages/details/details",
         "components/DateStatistics/DateStatistics",
-        "components/LedgerCard"
+        "components/LedgerCard/LedgerCard"
     ],
     "window": {
         "backgroundColor": "#39C5BB",
