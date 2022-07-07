@@ -32,7 +32,6 @@ Page({
         let { result } = await vxCloud('getBill')
         // console.log('result', result)
         let list = this.formatPrice(result.data)
-        // console.log('----list----', list);
 
         this.setData({
             BillList: list,
@@ -50,7 +49,7 @@ Page({
                 return item.date_unix === e.date_unix
             })
             let info = {
-                cdata: DAY_FROMAT(e.date_unix, "MM-DD HH:mm:ss"),
+                cdata: DAY_FROMAT(e.create_date, "MM-DD HH:mm:ss"),
                 iconclass: e.classInfo[0].iconclass,
                 iconname: e.classInfo[0].iconname,
                 ...e
