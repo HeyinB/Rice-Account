@@ -56,7 +56,8 @@
 </view> -->
 
 <view>
-	<view class="header">
+	<view>
+        <view class="header">
 		<view class="header-left">
 			<view class="icon">
 				<i>icon</i>
@@ -70,11 +71,11 @@
 			设置
 		</view>
 	</view>
-	<view class="ledger">
+	<!--<view class="ledger">
 		<view class="ledger-item">
 			<view class="name">普通账单</view>
 		</view>
-	</view>
+	</view>-->
 
 	<view class="price-Info">
 		<view class="price-top">
@@ -92,6 +93,8 @@
 			</view>
 		</view>
 	</view>
+    
+    </view>
 
 	<ScrollView BillList="{{BillList}}" />
 
