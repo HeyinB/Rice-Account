@@ -63,8 +63,8 @@
 				<i>icon</i>
 			</view>
 			<view>
-				<view>Hi，早上好</view>
-				<view>2022-06-20,多穿衣服</view>
+				<view>Hi，{{dateMsg}}</view>
+				<view>{{nowDate}}</view>
 			</view>
 		</view>
 		<view class="header-right" bindtap="tobookkeeping">

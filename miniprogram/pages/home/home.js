@@ -10,6 +10,8 @@ Page({
     data: {
         scrollViewHeight: '',
         BillList: [],
+        nowDate: "",
+        dateMsg: '',
         total: ''
     },
     onShow() {
@@ -23,6 +25,7 @@ Page({
     },
     onLoad: function (options) {
         wx.hideHomeButton()
+        this.getNowDate()
     },
     async getBillData() {
 
@@ -63,39 +66,7 @@ Page({
                 List[index].lumpSum += Number(e.price)
                 List[index].list.push(info)
             }
-
-
-
-            // for (let i = 0; i < List.length; i++) {
-            //     if (e.date_unix === List[i].date_unix) {
-            //         let info = {
-            //             cdata: DAY_FROMAT(e.date_unix, "MM-DD HH:mm:ss"),
-            //             iconclass: e.classInfo[0].iconclass,
-            //             iconname: e.classInfo[0].iconname,
-            //             ...e
-            //         }
-            //         List[i].lumpSum += Number(e.price)
-            //         List[i].list.push(info)
-            //         break;
-            //     } else {
-            //         let info = {
-            //             cdata: DAY_FROMAT(e.date_unix, "MM-DD HH:mm:ss"),
-            //             iconclass: e.classInfo[0].iconclass,
-            //             iconname: e.classInfo[0].iconname,
-            //             ...e
-            //         }
-            //         List.push({
-            //             date_unix: e.date_unix,
-            //             lumpSum: Number(e.price),
-            //             list: [info]
-            //         })
-            //         break;
-            //     }
-            // }
         })
-        console.log('--------', List);
-
-
         return List
     },
     tobookkeeping() {
@@ -106,6 +77,21 @@ Page({
     tostatistics() {
         wx.navigateTo({
             url: '../statistics/statistics',
+        })
+    },
+    getNowDate() {
+        let nowDate = new Date()
+        let date = DAY_FROMAT(nowDate, 'YYYY-MM-DD')
+        let hour = nowDate.getHours()
+        let msg = ''
+        if (hour > 0 && hour < 11) msg = "早上好"
+        if (hour > 11 && hour < 13) msg = "中午好"
+        if (hour > 12 && hour < 18) msg = "下午好"
+        if (hour > 18 && hour < 24) msg = "晚上好"
+
+        this.setData({
+            nowDate: date,
+            dateMsg: msg
         })
     }
 })
