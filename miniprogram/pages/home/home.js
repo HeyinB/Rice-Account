@@ -14,22 +14,22 @@ Page({
     },
     onShow() {
         wx.hideHomeButton()
-        this.setData({
-            BillList: [],
-            total: 0,
-        })
+        // this.setData({
+        //     BillList: [],
+        //     total: 0,
+        // })
         this.getBillData()
 
     },
-    onLoad: function(options) {
+    onLoad: function (options) {
         wx.hideHomeButton()
     },
     async getBillData() {
 
         let { result } = await vxCloud('getBill')
-            // console.log('result', result)
+        // console.log('result', result)
         let list = this.formatPrice(result.data)
-            // console.log('----list----', list);
+        // console.log('----list----', list);
 
         this.setData({
             BillList: list,
@@ -39,7 +39,7 @@ Page({
 
     formatPrice(Data) {
         let List = []
-            // console.log('----Data----', Data);
+        // console.log('----Data----', Data);
 
         Data.forEach(e => {
 
