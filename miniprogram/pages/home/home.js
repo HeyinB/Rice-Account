@@ -10,9 +10,11 @@ Page({
     data: {
         scrollViewHeight: '',
         BillList: [],
+        sumPrice: 0,
+        avgSum: 0,
         nowDate: "",
-        dateMsg: '',
-        total: ''
+        dateMsg: "",
+        total: ""
     },
     onShow() {
         wx.hideHomeButton()
@@ -41,10 +43,11 @@ Page({
 
     formatPrice(Data) {
         let List = []
+        let sum = 0
         // console.log('----Data----', Data);
 
         Data.forEach(e => {
-
+            sum += Number(e.price)
             let index = List.findIndex(item => {
                 return item.date_unix === e.date_unix
             })
@@ -65,6 +68,10 @@ Page({
                 List[index].lumpSum += Number(e.price)
                 List[index].list.push(info)
             }
+        })
+        this.setData({
+            sumPrice: sum.toFixed(2),
+            avgSum: (sum.toFixed(2) / Data.length).toFixed(2)
         })
         return List
     },

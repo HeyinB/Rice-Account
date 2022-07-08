@@ -1,86 +1,85 @@
 /* components/Keyboard/Keyboard.wxss */
 
 .input-box {
-    overflow: hidden;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100rpx;
-    line-height: 100rpx;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100rpx;
+  line-height: 100rpx;
 }
 
 .total {
-    height: 100%;
-    overflow: hidden;
-    font-size: var(--m-font--);
-    text-align: right;
+  height: 100%;
+  overflow: hidden;
+  font-size: var(--m-font--);
+  text-align: right;
 }
 
 .keyboard {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
 }
 
 .btn {
-    width: 100% !important;
-    /* height: 150rpx;
+  width: 100% !important;
+  /* height: 150rpx;
     line-height: 112rpx; */
-    font-size: var(--s-font--);
-    /* font-weight: lighter; */
+  font-size: var(--s-font--);
+  /* font-weight: lighter; */
 }
 
 .picker_time {
-    width: 100% !important;
-    height: 102rpx;
-    line-height: 103rpx;
-    font-size: var(--s-font--);
-    font-weight: bold;
-    background-color: #f8f8f8;
+  width: 100% !important;
+  height: 101rpx;
+  line-height: 101rpx;
+  font-size: var(--s-font--);
+  font-weight: bold;
+  background-color: #f8f8f8;
 }
 
 .animationStyleIn {
-    animation: bounceInUp 1s;
+  animation: bounceInUp 1s;
 }
 
 .animationStyleOut {
-    animation: bounceOutDown 1s;
+  animation: bounceOutDown 1s;
 }
 
 .remark_msg {
-    /* overflow: hidden; */
-    min-width: 150rpx;
-    word-wrap: nowrap;
+  /* overflow: hidden; */
+  min-width: 150rpx;
+  word-wrap: nowrap;
 }
-
 
 /* 弹出的输入框 */
 
 .input-contant {
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(25, 2, 2, .3);
-    z-index: 99999;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(25, 2, 2, 0.3);
+  z-index: 99999;
 }
 
 .modal {
-    position: fixed;
-    display: flex;
-    width: 100%;
-    height: 86rpx;
-    line-height: 86rpx;
-    background-color: #fff;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 86rpx;
+  line-height: 86rpx;
+  background-color: #fff;
 }
 
 .modal_input {
-    width: 100%;
-    height: 84rpx;
-    line-height: 84rpx;
+  width: 100%;
+  height: 84rpx;
+  line-height: 84rpx;
 }
