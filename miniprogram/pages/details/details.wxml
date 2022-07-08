@@ -7,13 +7,13 @@
           <view class="icon">删除</view>
         </view>
         <view class="c">
-          <view class="icon">icon</view>
+          <view class="icon iconfont {{billInfo.iconclass}}"></view>
           <view class="content">
             <view class="left">
-              <view class="title"><span>餐饮</span><span>-</span><span>精致下午茶</span></view>
-              <view class="time">2019.12.14 18：28</view>
+              <view class="title"><span>{{billInfo.iconname}}</span></view>
+              <view class="time">{{billInfo.cdata}}</view>
             </view>
-            <view class="right">-￥169</view>
+            <view class="right">-￥{{billInfo.price}}</view>
           </view>
         </view>
         </view>
@@ -30,7 +30,7 @@
         </view>
         <view class="row">
           <view class="label">备注</view>
-          <view class="value">人是铁饭是钢一顿不吃饿得慌</view>
+          <view class="value">{{billInfo.remark}}</view>
         </view>
        </view>
       </view>
