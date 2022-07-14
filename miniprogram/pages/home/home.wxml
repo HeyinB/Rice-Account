@@ -1,60 +1,17 @@
-<!-- <view class="home-container">
-    <view class="home-top">
-        <view class="select-time">
-            <view class="year">2022年</view>
-            <view class="date">
-                <text class="num">03</text>
-                <text>
-                    <text class="month">月</text>
-                    <text class="icon">↓</text>
-                </text>
-            </view>
-        </view>
-        <view class="total-expenses">
-            <view>支出</view>
-            <view class="expenditure" >￥29999999.111</view>
-        </view>
-    </view>
-    <view class="home-list">
-        <view class="statistics" bindtap="tostatistics">
-            统计
-        </view>
-        <view class="add" bindtap="tobookkeeping">
-            添加
-        </view>
-        <ScrollView BillList="{{BillList}}"/>
-    </view>
-    
-</view> -->
-<!-- <view class="home-container">
-    <view class="home-top">
-        <view class="select-time">
-            <view class="year">2022年</view>
-            <view class="date">
-                <text class="num">03</text>
-                <text>
-                    <text class="month">月</text>
-                    <text class="icon">↓</text>
-                </text>
-            </view>
-        </view>
-        <view class="total-expenses">
-            <view>支出</view>
-            <view class="expenditure" >￥29999999.111</view>
-        </view>
-    </view>
-    <view class="home-list">
-        <view class="statistics" bindtap="tostatistics">
-            统计
-        </view>
-        <view class="add" bindtap="tobookkeeping">
-            添加
-        </view>
-        <ScrollView BillList="{{BillList}}"/>
-    </view>
-    
-</view> -->
 
+<!--
+    <view class="home-list">
+        <view class="statistics" bindtap="tostatistics">
+            统计
+        </view>
+        <view class="add" bindtap="tobookkeeping">
+            添加
+        </view>
+        <ScrollView BillList="{{BillList}}"/>
+    </view>
+    
+</view> -->
+<!-- 
 <view>
 	<view>
         <view class="header">
@@ -71,11 +28,6 @@
 			设置
 		</view>
 	</view>
-	<!--<view class="ledger">
-		<view class="ledger-item">
-			<view class="name">普通账单</view>
-		</view>
-	</view>-->
 
 	<view class="price-Info">
 		<view class="price-top">
@@ -98,5 +50,34 @@
 
 	<ScrollView BillList="{{BillList}}" />
 
-</view>
+</view> -->
 
+
+<view>
+	<view class="container">
+		<view class="container-top">
+			<view class="header">
+				<view class="expenditure">
+					<view>本月支出（元）</view>
+					<view>6371.70</view>
+				</view>
+				<view class="bill">
+					<view>生活账单</view>
+				</view>
+			</view>
+			<view class="middle">
+				<view class="middle-left">
+					<view>本月收入</view>
+					<view>18132.04</view>
+				</view>
+				<view class="middle-right">
+					<view>结余</view>
+					<view>18132.04</view>
+				</view>
+			</view>
+			<view class="footer">
+				一个盒子
+			</view>
+		</view>
+	</view>
+</view>
