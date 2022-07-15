@@ -2,6 +2,5 @@
   "usingComponents": {
     "ScrollView":"../../components/ScrollView/ScrollView"
   },
-  "navigationBarTitleText":"记账",
-  "navigationBarBackgroundColor":"#009D73"
+  "navigationBarTitleText":"记账"
 }

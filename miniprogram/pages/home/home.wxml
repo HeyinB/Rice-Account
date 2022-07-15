@@ -58,8 +58,8 @@
 		<view class="container-top">
 			<view class="header">
 				<view class="expenditure">
-					<view>本月支出（元）</view>
-					<view>6371.70</view>
+					<view class="payout-text">本月支出（元）</view>
+					<view class="payout">6371.70</view>
 				</view>
 				<view class="bill">
 					<view>生活账单</view>
@@ -67,12 +67,12 @@
 			</view>
 			<view class="middle">
 				<view class="middle-left">
-					<view>本月收入</view>
-					<view>18132.04</view>
+					<view class="lable">本月收入</view>
+					<view class="value">18132.04</view>
 				</view>
 				<view class="middle-right">
-					<view>结余</view>
-					<view>18132.04</view>
+					<view class="lable">结余</view>
+					<view class="value">18132.04</view>
 				</view>
 			</view>
 			<view class="footer">

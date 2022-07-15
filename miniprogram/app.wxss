@@ -8,12 +8,15 @@
 @import "style/animate.wxss";
 @import "style/iconfont.wxss";
 page {
-    /* --MIKU-color--: #f0f6ee;
-    --RIN-color--: #FFA500;
-    --LEN-color--: #FFC0CB; */
-    --haoyuebai--:rgb(238,247,242);
-    --bicheng--:rgb(17,78,122);
-    --bg-default-color--: #f1f1f1;
+    
+    --brandColor--:rgb(50,71,211);      /* 品牌色*/
+    --secondaryColor1--:rgb(245,145,0);     /* 辅助色*/
+    --secondaryColor2--: rgb(83,120,198);       /* 辅助色*/
+    --red--: rgb(250,59,66);        /* 收入红色*/
+    --green--: rgb(0,152,85);       /* 支出绿色*/
+    --primaryTextColor--: rgb(60,69,70);        /* 一级文本*/
+    --secondaryTextColor--: rgb(138,143,144);       /* 二级文本*/
+
     --white: rgba(255, 255, 255, 0);
     --xs-font--: 20rpx;
     --s-font--: 30rpx;
