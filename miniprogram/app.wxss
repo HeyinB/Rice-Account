@@ -10,13 +10,14 @@
 page {
     
     --brandColor--:rgb(50,71,211);      /* 品牌色*/
-    --secondaryColor1--:rgb(245,145,0);     /* 辅助色*/
-    --secondaryColor2--: rgb(83,120,198);       /* 辅助色*/
+    --secondaryColor1--:#ad8446;     /* 辅助色*/
+    --secondaryColor2--: #5378C6;       /* 辅助色*/
     --red--: rgb(250,59,66);        /* 收入红色*/
     --green--: rgb(0,152,85);       /* 支出绿色*/
     --primaryTextColor--: rgb(60,69,70);        /* 一级文本*/
     --secondaryTextColor--: rgb(138,143,144);       /* 二级文本*/
-
+        /* 底部白 F1F1F1*/
+        /* 蓝色 3247D3*/
     --white: rgba(255, 255, 255, 0);
     --xs-font--: 20rpx;
     --s-font--: 30rpx;
