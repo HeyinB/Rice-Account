@@ -1,4 +1,3 @@
-// components/DateStatistics/DateStatistics.js
 
 import * as echarts from "../ec-canvas/echarts";
 
@@ -31,7 +30,7 @@ Component({
       let option = {
           backgroundColor: 'transparent',
           title: [{
-              text: '75%',
+              text: '75%剩余',
               x: '45%',
               y: '43%',
               textAlign: 'center',

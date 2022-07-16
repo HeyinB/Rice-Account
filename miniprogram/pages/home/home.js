@@ -81,9 +81,9 @@ Page({
         })
     },
     tostatistics() {
-        wx.navigateTo({
-            url: '../statistics/statistics',
-        })
+        // wx.navigateTo({
+        //     url: '../statistics/statistics',
+        // })
     },
     getNowDate() {
         let nowDate = new Date()

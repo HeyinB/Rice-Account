@@ -1,11 +1,9 @@
 {
     "pages": [
         "pages/home/home",
-        "pages/statistics/statistics",
         "pages/ledger/ledger",
         "pages/bookkeeping/bookkeeping",
         "pages/details/details",
-        "components/DateStatistics/DateStatistics",
         "components/LedgerCard/LedgerCard"
     ],
     "window": {

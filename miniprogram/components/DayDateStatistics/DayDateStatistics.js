@@ -1,4 +1,3 @@
-// components/DateStatistics/DateStatistics.js
 
 import * as echarts from '../ec-canvas/echarts';
 
