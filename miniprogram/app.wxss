@@ -21,8 +21,10 @@ page {
     --white: rgba(255, 255, 255, 0);
     --xs-font--: 20rpx;
     --s-font--: 30rpx;
+    --xm-font--: 40rpx;
     --m-font--: 50rpx;
     --l-font--: 70rpx;
+    
 }
 
 

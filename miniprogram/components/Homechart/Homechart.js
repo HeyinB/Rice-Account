@@ -23,7 +23,7 @@ Component({
   ready() {
     setTimeout(() => {
       this.setOption();
-    }, 2000);
+    }, 500);
   },
   methods: {
     setOption() {

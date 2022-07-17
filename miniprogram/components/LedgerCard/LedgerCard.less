@@ -1,0 +1,65 @@
+.LedgerCard{
+    margin: 0 30rpx;
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header-left{
+            .date{
+                font-size: var(--s-font--);
+                font-weight: bold;
+            }
+        }
+        .header-right{
+            font-size: var(--xs-font--);
+            color: var(--secondaryTextColor--);;
+            .receive{
+
+            }
+            .pay{
+
+            }
+        }
+    }
+    .billBox{
+        margin: 20rpx 0;
+        padding: 20rpx;
+        background-color: #fff;
+        border-radius: 20rpx;
+        .billList{
+            .viewItem{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .viewItem-left{
+                    display: flex;
+                    align-items: center;
+                    .icon{
+                        margin-right: 20rpx;
+                        width: 80rpx;
+                        height: 80rpx;
+                        text-align: center;
+                        line-height: 80rpx;
+                        font-size: var(--xm-font--);
+                        // background-color: #66ccff;
+                    }
+                    .billInfo{
+                        flex:1;
+                        .billType{
+                            font-weight: bold;
+                        }
+                        .billTime{
+                            color: var(--primaryTextColor--);
+                            font-size: var(--xs-font--);
+                        }
+                    }
+                }
+                .billPrice{
+                    font-size: var(--xm-font--);
+                    font-weight: bold;
+                    color: var(--green--);
+                }
+            }
+        }
+    }
+}
