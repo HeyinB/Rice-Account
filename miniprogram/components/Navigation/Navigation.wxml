@@ -1,0 +1,8 @@
+<view class="nav" style="right: {{show === 0?'0':'-300rpx'}}">
+  <view class="nav-list">
+    <view class="icon" bindtap="ShowOrHide">></view>
+    <view class="nav-item"  bindtap="tobookkeeping">添加</view>
+    <view class="nav-item">图表</view>
+    <view class="nav-item">我的</view>
+  </view>
+</view>

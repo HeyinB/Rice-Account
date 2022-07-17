@@ -40,6 +40,7 @@
 </view> -->
 
 <view id="app">
+  <Navigation></Navigation>
   <scroll-view
     scroll-y
     class="scrollView"
@@ -62,7 +63,7 @@
           </view>
 
           <view class="bill">
-            <view bindtap="tobookkeeping">生活账单</view>
+            <view>生活账单</view>
           </view>
         </view>
 
@@ -85,4 +86,5 @@
       </view>
     </view>
   </scroll-view>
+  
 </view>

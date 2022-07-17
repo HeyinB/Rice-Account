@@ -1,0 +1,17 @@
+.nav {
+  position: fixed;
+  bottom: 200rpx;
+  z-index: 999;
+  transition: all ease 1s;
+}
+.nav .nav-list {
+  display: flex;
+}
+.nav .nav-list .icon {
+  width: 50rpx;
+}
+.nav .nav-list .nav-item {
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #66ccff;
+}

@@ -75,11 +75,6 @@ Page({
         })
         return List
     },
-    tobookkeeping() {
-        wx.navigateTo({
-            url: '../bookkeeping/bookkeeping',
-        })
-    },
     tostatistics() {
         // wx.navigateTo({
         //     url: '../statistics/statistics',
