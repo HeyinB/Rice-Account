@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "HomeBox":"../../components/HomeBox/HomeBox",
-    "LedgerCard":"../../components/LedgerCard/LedgerCard"
+    "LedgerCard":"../../components/LedgerCard/LedgerCard",
+    "ScrollView":"../../components/ScrollView/ScrollView"
   },
   "navigationBarTitleText":"记账"
 }

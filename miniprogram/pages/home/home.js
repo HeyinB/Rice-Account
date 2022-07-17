@@ -15,7 +15,7 @@ Page({
         nowDate: "",
         dateMsg: "",
         total: ""
-    },
+    }, 
     onShow() {
         wx.hideHomeButton()
         // this.setData({
