@@ -1,0 +1,26 @@
+.card {
+    /* position: relative;
+    overflow: hidden; */
+    /* margin: 20rpx;
+    border-radius: 10rpx;
+    background-color: var(--green--); */
+}
+.name {
+    margin: 0 40rpx;
+}
+
+.card-item {
+    padding: 20rpx;
+    display: flex;
+}
+
+.time {
+    padding: 5rpx 10rpx;
+    border: 1rpx solid #ccc;
+    border-radius: 8rpx;
+}
+
+.chart {
+    width: 180rpx;
+    height: 180rpx;
+}

@@ -1,16 +1,3 @@
-
-<!--
-    <view class="home-list">
-        <view class="statistics" bindtap="tostatistics">
-            统计
-        </view>
-        <view class="add" bindtap="tobookkeeping">
-            添加
-        </view>
-        <ScrollView BillList="{{BillList}}"/>
-    </view>
-    
-</view> -->
 <!-- 
 <view>
 	<view>
@@ -52,32 +39,52 @@
 
 </view> -->
 
+<view id="app">
+  <Navigation></Navigation>
+  <scroll-view
+    scroll-y
+    class="scrollView"
+    refresher-enabled="{{ true }}"
+    refresher-threshold="{{ 100 }}"
+    refresher-default-style="black"
+    refresher-background="rgba(255, 255, 255, 0)"
+    refresher-triggered="{{ triggered }}"
+    bindrefresherrefresh="onPulling"
+    refresher-triggered="{{ istrigger }}"
+    style="height: 100vh;"
+  >
+  <!-- bindscrolltolower="tolower" -->
+    <view class="container">
+      <view class="container-top">
+        <view class="header">
+          <view class="expenditure">
+            <view class="payout-text">本月支出（元）</view>
+            <view class="payout">{{ sumPrice }}</view>
+          </view>
 
-<view>
-	<view class="container">
-		<view class="container-top">
-			<view class="header">
-				<view class="expenditure">
-					<view class="payout-text">本月支出（元）</view>
-					<view class="payout">6371.70</view>
-				</view>
-				<view class="bill">
-					<view>生活账单</view>
-				</view>
-			</view>
-			<view class="middle">
-				<view class="middle-left">
-					<view class="lable">本月收入</view>
-					<view class="value">18132.04</view>
-				</view>
-				<view class="middle-right">
-					<view class="lable">结余</view>
-					<view class="value">18132.04</view>
-				</view>
-			</view>
-			<view class="footer">
-				一个盒子
-			</view>
-		</view>
-	</view>
+          <view class="bill">
+            <view>生活账单</view>
+          </view>
+        </view>
+
+        <view class="middle">
+          <view class="middle-left">
+            <view class="lable">本月收入</view>
+            <view class="value">18132.04</view>
+          </view>
+          <view class="middle-right">
+            <view class="lable">结余</view>
+            <view class="value">18132.04</view>
+          </view>
+        </view>
+        <view class="footer"> <HomeBox></HomeBox> </view>
+      </view>
+      <view>
+        <view wx:for="{{ BillList }}" wx:key="item">
+          <LedgerCard info="{{ item }}"></LedgerCard>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  
 </view>

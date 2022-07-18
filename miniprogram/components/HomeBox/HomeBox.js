@@ -1,4 +1,4 @@
-// components/YearDateStatistics/YearDateStatistics.js
+// components/HomeBox/HomeBox.js
 Component({
     /**
      * 组件的属性列表

@@ -15,7 +15,7 @@ Page({
         nowDate: "",
         dateMsg: "",
         total: ""
-    },
+    }, 
     onShow() {
         wx.hideHomeButton()
         // this.setData({
@@ -75,15 +75,10 @@ Page({
         })
         return List
     },
-    tobookkeeping() {
-        wx.navigateTo({
-            url: '../bookkeeping/bookkeeping',
-        })
-    },
     tostatistics() {
-        wx.navigateTo({
-            url: '../statistics/statistics',
-        })
+        // wx.navigateTo({
+        //     url: '../statistics/statistics',
+        // })
     },
     getNowDate() {
         let nowDate = new Date()

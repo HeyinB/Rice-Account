@@ -1,0 +1,35 @@
+.homeChartBox{
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    margin: 20rpx 30rpx;
+    border-radius: 20rpx;
+    background-color: #53A393;
+    .chart{
+        margin-right: 10rpx;
+    }
+    .budget{
+        flex: 1;
+        .budgetBox{
+            .title{
+                font-size: 25rpx;
+                font-weight: bold;
+            }
+            .info{
+                display: flex;
+                padding-top: 10rpx;
+                .row{
+                    flex:1;
+                   .lable{
+                    font-size: var(--xs-font--);
+                    color: rgb(226, 220, 220);
+                   } 
+                   .value{
+                    font-size: 35rpx;
+                   }
+                }
+            }
+        }
+    }
+}

@@ -1,9 +1,0 @@
-{
-    "usingComponents": {
-        "DayDateStatistics": "../../components/DayDateStatistics/DayDateStatistics",
-        "MonthDateStatistics": "../../components/MonthDateStatistics/MonthDateStatistics",
-        "YearDateStatistics": "../../components/YearDateStatistics/YearDateStatistics"
-    },
-    "navigationBarTitleText": "统计",
-    "navigationBarBackgroundColor": "#39C5BB"
-}
