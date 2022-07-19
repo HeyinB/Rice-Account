@@ -1,0 +1,89 @@
+.container{
+  margin-top: 50rpx;
+  .container-top{
+    display:flex;
+    justify-content:space-between;
+    .detail-left{
+      width:35rpx;
+      border-radius: 20rpx;
+      background-color: #fff;
+    }
+    .detail-middle{
+      flex: 1;
+      display:flex;
+      flex-direction:column;
+      margin: 0 20rpx;
+      padding: 20rpx;
+      text-align:center;
+      border-radius: 20rpx;
+      background-color: #fff;
+      .top{
+        align-self:center;
+        .detail-icon{
+          margin: 50rpx auto;
+          width:120rpx;
+          height:120rpx;
+          line-height:120rpx;
+          border-radius: 50%;
+          // background-color: #66ccff;
+          .icon{
+            font-size: 60rpx;
+          }
+        }
+        .detail-name{
+          letter-spacing:10rpx;
+          font-size: var(--xm-font--);
+          font-weight: bold;
+        }
+        .remake{
+          margin: 10rpx 0;
+          color: var(--secondaryTextColor--);
+        }
+      }
+      .midel{
+        align-self:center;
+        margin-top: 150rpx;
+        .price{
+          color: var(--green--);
+          font-size: var(--l-font--);
+          font-weight: bold;
+        }
+        .time{
+          margin:50rpx 0 200rpx 0;
+          color: var(--secondaryTextColor--);
+        }
+      }
+    }
+    .detail-right{
+      width: 35rpx;
+      border-radius: 20rpx;
+      background-color: #fff;
+
+    }
+  }
+  .container-bottom{
+    position: absolute;
+    bottom: 100rpx;
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+    height:100rpx;
+    line-height:100rpx;
+    font-size: var(--s-font--);
+    text-align: center;
+    .btn-edi{
+      flex: 2;
+      color:var(--brandColor--);
+      background-color: #fff;
+      margin: 0 20rpx;
+      border-radius: 30rpx;
+    }
+    .btn-del{
+        flex:1;
+        background-color: #fff;
+        color:var(--red--);
+        margin: 0 20rpx;
+        border-radius: 30rpx;
+    }
+  }
+}

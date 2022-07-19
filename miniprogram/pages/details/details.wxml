@@ -1,4 +1,4 @@
-
+<!-- 
     <view class="container">
       <view class="header">
         <view class="header-container">
@@ -35,4 +35,28 @@
        </view>
       </view>
       <view class="btn"><view>编辑账单</view></view>
+    </view> -->
+
+    <view class="container">
+      <view class="container-top">
+        <view class="detail-left"></view>
+        <view class="detail-middle">
+          <view class="top">
+            <view class="detail-icon">
+              <view class="icon iconfont {{billInfo.iconclass}}"></view>
+            </view>
+            <view class="detail-name">{{billInfo.iconname}}</view>
+            <view class="remake">{{billInfo.remark}}</view>
+          </view>
+          <view class="midel">
+            <view class="price">-{{billInfo.price}}</view>
+            <view class="time">{{billInfo.cdata}}</view>
+          </view>
+        </view>
+        <view class="detail-right"></view>
+      </view>
+      <view class="container-bottom">
+        <view class="btn-edi">编辑</view>
+        <view class="btn-del">删除</view>
+      </view>
     </view>

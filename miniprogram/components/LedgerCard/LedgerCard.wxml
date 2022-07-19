@@ -36,7 +36,7 @@
 				<view class="viewItem-left">
 					<view class="icon iconfont {{item.iconclass}}"></view>
 					<view class="billInfo">
-						<view class="billType">{{item.iconname}}--{{item.remark}}</view>
+						<view class="billType">{{item.iconname}}<text wx:if="{{item.remark}}">--</text>{{item.remark}}</view>
 						<view class="billTime">{{item.cdata}}</view>
 					</view>
 				</view>
