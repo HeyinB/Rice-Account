@@ -11,23 +11,24 @@ Component({
      * 组件的初始数据
      */
     data: {
-        show:1
+        show: 1
     },
 
     /**
      * 组件的方法列表
      */
     methods: {
-        ShowOrHide(){
+        ShowOrHide() {
             console.log(this.data.show)
             this.setData({
-                show:this.data.show === 1?0:1
+                show: this.data.show === 1 ? 0 : 1
             })
         },
         tobookkeeping() {
             wx.navigateTo({
                 url: '../bookkeeping/bookkeeping',
             })
+            this.ShowOrHide()
         },
     }
 })
