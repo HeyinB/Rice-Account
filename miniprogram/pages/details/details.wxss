@@ -4,6 +4,7 @@
 .container .container-top {
   display: flex;
   justify-content: space-between;
+  height: 70vh;
 }
 .container .container-top .detail-left {
   width: 35rpx;
