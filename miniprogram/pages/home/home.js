@@ -14,8 +14,9 @@ Page({
         avgSum: 0,
         nowDate: "",
         dateMsg: "",
-        total: ""
-    }, 
+        total: "",
+        modalName: null
+    },
     onShow() {
         wx.hideHomeButton()
         // this.setData({
@@ -27,7 +28,6 @@ Page({
     },
     onLoad: function (options) {
         wx.hideHomeButton()
-        this.getNowDate()
     },
     async getBillData() {
 
@@ -80,19 +80,22 @@ Page({
         //     url: '../statistics/statistics',
         // })
     },
-    getNowDate() {
-        let nowDate = new Date()
-        let date = DAY_FROMAT(nowDate, 'YYYY-MM-DD')
-        let hour = nowDate.getHours()
-        let msg = ''
-        if (hour > 0 && hour < 11) msg = "早上好"
-        if (hour > 11 && hour < 13) msg = "中午好"
-        if (hour > 12 && hour < 18) msg = "下午好"
-        if (hour > 18 && hour < 24) msg = "晚上好"
+    showModal(e) {
+        console.log('-------showModal--------', e.currentTarget.dataset.target);
 
         this.setData({
-            nowDate: date,
-            dateMsg: msg
+            modalName: e.currentTarget.dataset.target
         })
+        console.log('-------this,---------', this.data.modalName);
+    },
+    hideModal(e) {
+        console.log('-------hideModal--------');
+        this.setData({
+            modalName: null
+        })
+    },
+    tabSelect(e) {
+        this.TabCur = e.currentTarget.dataset.id;
+        this.scrollLeft = (e.currentTarget.dataset.id - 1) * 60
     }
 })

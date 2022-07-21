@@ -1,5 +1,6 @@
 .LedgerCard {
   margin: 0 30rpx;
+  color: var(--primaryTextColor--);
 }
 .LedgerCard .header {
   display: flex;

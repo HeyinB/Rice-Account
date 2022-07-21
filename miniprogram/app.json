@@ -4,7 +4,7 @@
         "pages/ledger/ledger",
         "pages/bookkeeping/bookkeeping",
         "pages/details/details",
-        "components/LedgerCard/LedgerCard"
+        "pages/test/test"
     ],
     "window": {
         "backgroundColor": "#39C5BB",
