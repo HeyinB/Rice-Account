@@ -18,6 +18,11 @@ Component({
      * 组件的方法列表
      */
     methods: {
-
+        toBudget() {
+            console.log('-----6666----------6666');
+            wx.navigateTo({
+                url: `../../pages/budget/budget`
+            })
+        }
     }
 })

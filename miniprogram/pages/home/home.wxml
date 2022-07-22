@@ -1,22 +1,5 @@
 
 	<view style="background-color: #f1f1f1;">
-		<!-- <scroll-view scroll-y class="DrawerPage {{modalName=='viewModal'?'show':''}}" >
-					
-			<view class='padding margin text-center'>
-				<view class='cu-btn bg-green lg block shadow radius margin-xl' bindtap="showModal" data-target="viewModal">
-					打开抽屉
-				</view>
-			</view>
-			<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg">
-				351351315343513
-			</view>
-			
-			<view class='padding margin text-center'>
-				<view class='cu-btn bg-green lg block shadow radius margin-xl' bindtap="showModal" data-target="viewModal">
-					打开抽屉
-				</view>
-			</view>
-		</scroll-view> -->
 
       <Navigation></Navigation>
       <scroll-view

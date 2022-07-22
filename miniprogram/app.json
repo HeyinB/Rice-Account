@@ -4,7 +4,8 @@
         "pages/ledger/ledger",
         "pages/bookkeeping/bookkeeping",
         "pages/details/details",
-        "pages/test/test"
+        "pages/test/test",
+        "pages/budget/budget"
     ],
     "window": {
         "backgroundColor": "#39C5BB",
