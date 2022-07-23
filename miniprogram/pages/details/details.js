@@ -19,14 +19,16 @@ Page({
       id: options.id
     })
   },
-  onShow() {
+  onReady() {
     this.getDetails()
   },
   async getDetails() {
 
     let { result } = await vxCloud('getDetails', { id: this.data.id })
 
-    result.cdata = DAY_UNIX(result.create_date)
+    if(result){
+      result.cdata = DAY_UNIX(result.create_date)
+    }
     this.setData({
       billInfo: result
     })
