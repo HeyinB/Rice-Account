@@ -57,6 +57,6 @@
       </view>
       <view class="container-bottom">
         <view class="btn-edi">编辑</view>
-        <view class="btn-del">删除</view>
+        <view class="btn-del" bindtap="delete">删除</view>
       </view>
     </view>

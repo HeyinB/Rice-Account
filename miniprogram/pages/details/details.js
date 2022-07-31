@@ -32,5 +32,8 @@ Page({
     this.setData({
       billInfo: result
     })
+  },
+  async delete(){
+    
   }
 })

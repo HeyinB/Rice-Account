@@ -1,10 +1,10 @@
 {
     "pages": [
+        "pages/test/test",
         "pages/home/home",
         "pages/ledger/ledger",
         "pages/bookkeeping/bookkeeping",
         "pages/details/details",
-        "pages/test/test",
         "pages/budget/budget"
     ],
     "window": {
