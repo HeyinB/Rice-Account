@@ -1,1 +1,62 @@
-/* pages/budget/budget.wxss */
+.budget {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(#4ea28d, #71a9ac);
+}
+.budget .back {
+  padding: 4vh 0;
+  color: #fff;
+}
+.budget .budget-top {
+  color: #fff;
+  margin-left: 50rpx;
+}
+.budget .budget-middle {
+  margin: 50rpx 0;
+}
+.budget .budget-middle .chart {
+  width: 300rpx;
+  height: 300rpx;
+  margin: 0 auto;
+  background-color: #66ccff;
+}
+.budget .budget-middle .budget-info {
+  display: flex;
+  text-align: center;
+  margin: 50rpx 0 0 0;
+  color: #fff;
+}
+.budget .budget-middle .budget-info .all-budget {
+  flex: 1;
+}
+.budget .budget-middle .budget-info .all-budget .label {
+  font-size: 20rpx;
+}
+.budget .budget-middle .budget-info .all-budget .value {
+  font-size: 40rpx;
+}
+.budget .budget-middle .budget-info .lave-budget {
+  flex: 1;
+  border-left: 1rpx solid #fff;
+}
+.budget .budget-middle .budget-info .lave-budget .label {
+  font-size: 20rpx;
+}
+.budget .budget-middle .budget-info .lave-budget .value {
+  font-size: 40rpx;
+}
+.budget .budget-footer {
+  position: absolute;
+  bottom: 150rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.budget .budget-footer .btn {
+  color: #4ea28d;
+  height: 100rpx;
+  width: 60vw;
+  text-align: center;
+  line-height: 100rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+}

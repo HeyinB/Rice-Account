@@ -1,0 +1,63 @@
+.budget {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(#4ea28d, #71a9ac);
+  .back {
+    padding: 4vh 0;
+    color: #fff;
+  }
+  .budget-top {
+    color: #fff;
+    margin-left: 50rpx;
+  }
+  .budget-middle {
+    margin: 50rpx 0;
+    .chart {
+      width: 300rpx;
+      height: 300rpx;
+      margin: 0 auto;
+      background-color: #66ccff;
+    }
+    .budget-info {
+      display: flex;
+      text-align: center;
+      margin: 50rpx 0 0 0;
+
+      color: #fff;
+      .all-budget {
+        flex: 1;
+        .label {
+          font-size: 20rpx;
+        }
+        .value {
+          font-size: 40rpx;
+        }
+      }
+      .lave-budget {
+        flex: 1;
+        border-left: 1rpx solid #fff;
+        .label {
+          font-size: 20rpx;
+        }
+        .value {
+          font-size: 40rpx;
+        }
+      }
+    }
+  }
+  .budget-footer {
+    position: absolute;
+    bottom: 150rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    .btn {
+      color: #4ea28d;
+      height: 100rpx;
+      width: 60vw;
+      text-align: center;
+      line-height: 100rpx;
+      border-radius: 10rpx;
+      background-color: #fff;
+    }
+  }
+}

@@ -1,4 +1,24 @@
 
 <view class="budget">
-  我的预算
+  <view class="back">《</view>
+  <view class="budget-top">
+    <view style="font-size:50rpx;">我的预算</view>
+    <view style="font-size:30rpx;">2022.4</view>
+  </view>
+  <view class="budget-middle">
+    <view class="chart"></view>
+    <view class="budget-info">
+      <view class="all-budget">
+        <view class="label">总预算</view>
+        <view class="value">8500.00</view>
+      </view>
+      <view class="lave-budget">
+        <view class="label">总预算</view>
+        <view class="value">8500.00</view>
+      </view>
+    </view>
+  </view>
+  <view class="budget-footer">
+    <view class="btn">更改我的预算</view>
+  </view>
 </view>
