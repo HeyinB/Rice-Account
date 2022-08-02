@@ -1,4 +1,5 @@
 // pages/home/home.js
+import request from '../../utils/request'
 import vxCloud from '../../utils/vxCloud'
 import { DAY_FROMAT } from '../../utils/day'
 // import { DAY_UNIX } from '../../utils/day.js'
@@ -24,6 +25,7 @@ Page({
         //     total: 0,
         // })
         this.getBillData()
+        this.getUser()
 
     },
     onLoad: function (options) {
@@ -97,5 +99,9 @@ Page({
     tabSelect(e) {
         this.TabCur = e.currentTarget.dataset.id;
         this.scrollLeft = (e.currentTarget.dataset.id - 1) * 60
+    },
+    async getUser(){
+        let res = await request('http://localhost:5000/v1/user/findUserData')
+        console.log(res)
     }
 })

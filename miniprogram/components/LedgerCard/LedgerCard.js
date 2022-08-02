@@ -18,9 +18,9 @@ Component({
      * 组件的方法列表
      */
     methods: {
-        toDetailPage({ target }) {
-            let id = target.dataset.id;
-            console.log(id)
+        toDetailPage({currentTarget}) {
+            let id = currentTarget.dataset.id;
+            // console.log(currentTarget.dataset)
             wx.navigateTo({
                 url: `../../pages/details/details?id=${id}`
             })

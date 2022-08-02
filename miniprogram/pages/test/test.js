@@ -8,6 +8,28 @@ Page({
 
   },
 
+  login(){
+    wx.login({
+      success (res) {
+        console.log('登录！' + res.code)
+        if (res.code) {
+          //发起网络请求
+          wx.request({
+            url: 'http://localhost:5000/v1/user/loginORreg',
+            method:'post',
+            data: {
+              code: res.code
+            },
+            success (res) {
+                console.log(res)
+            }
+          })
+        } else {
+          console.log('登录失败！' + res.errMsg)
+        }
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
