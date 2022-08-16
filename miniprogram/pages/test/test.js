@@ -1,4 +1,5 @@
 // pages/test/test.js
+import require from '../../utils/request'
 Page({
 
   /**
@@ -8,22 +9,32 @@ Page({
 
   },
 
-  login(){
+  async getuser() {
+    let id = wx.getStorageSync('id')
+    let data = await require({
+      url: 'user/findUserInfo',
+      method: 'get',
+      data: {
+        id
+      }
+    })
+    console.log('-------getuser---------', data);
+  },
+  async login() {
     wx.login({
-      success (res) {
+      async success(res) {
         console.log('登录！' + res.code)
         if (res.code) {
           //发起网络请求
-          wx.request({
-            url: 'http://localhost:5000/v1/user/loginORreg',
-            method:'post',
+          let data = await require({
+            url: 'login/LoginOrRegister',
+            method: 'post',
             data: {
-              code: res.code
-            },
-            success (res) {
-                console.log(res)
+              ...res
             }
           })
+          wx.setStorageSync('token', data.data.token)
+          wx.setStorageSync('id', data.data.id)
         } else {
           console.log('登录失败！' + res.errMsg)
         }
