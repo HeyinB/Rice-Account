@@ -18,7 +18,6 @@ Page({
         id
       }
     })
-    console.log('-------getuser---------', data);
   },
   async login() {
     wx.login({

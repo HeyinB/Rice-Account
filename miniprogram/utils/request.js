@@ -3,7 +3,7 @@ let temp_request = [], is_freshing = false;
 
 function require({ url, data, method = 'GET' }) {
     url = baseUrl + url
-    console.log('-------url---------', data);
+    let params_ = arguments
     return new Promise((resolve, reject) => {
         wx.request({
             url,
@@ -14,17 +14,14 @@ function require({ url, data, method = 'GET' }) {
                 'authorization': wx.getStorageSync('token')
             },
             async success(res) {
-                console.log('-------data-f返回了--------', res);
                 // if(data.code === 200) resolve(res)
                 switch (res.data.code) {
                     case 200: resolve(res); break;
                     case 401:
-                        console.log('-----kkk----------kkk', is_freshing);
                         if (!is_freshing) {
                             //刷新token
                             await refresh()
                         }
-                        // 关键步骤~~~~
                         resolve(new Promise(reslove => {
                             temp_request.push(() => {
                                 reslove(require(...params_))
@@ -49,7 +46,7 @@ async function refresh() {
     wx.login({
         async success(data) {
             console.log('-----888----------888');
-            let res = await require({ url: 'login/refreshToken', method: 'POST', data })
+            let res = await require({ url: 'login/refreshToken', method: 'POST', data: { id: wx.getStorageSync('id') } })
             // uni.setStorageSync('api_token', res.token)
             // is_freshing = false
             // temp_request.map(cb => cb())
