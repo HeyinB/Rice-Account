@@ -41,20 +41,13 @@ function require({ url, data, method = 'GET' }) {
 
 
 async function refresh() {
-    console.log('-----jll----------jll', temp_request);
     is_freshing = true;
     wx.login({
-        async success(data) {
-            console.log('-----888----------888');
-            let res = await require({ url: 'login/refreshToken', method: 'POST', data: { id: wx.getStorageSync('id') } })
-            // uni.setStorageSync('api_token', res.token)
-            // is_freshing = false
-            // temp_request.map(cb => cb())
-            // // 清空temp_request
-            // temp_request = []
-            console.log('-----进来了----------进来了');
-            wx.setStorageSync('token', res.data.token)
-            wx.setStorageSync('id', res.data.id)
+        async success(res) {
+            let id = await wx.getStorageSync('id')
+            let { data } = await require({ url: 'login/refreshToken', method: 'POST', data: { id } })
+            wx.setStorageSync('token', data.data.token)
+            wx.setStorageSync('id', data.data.id)
             is_freshing = false
             temp_request.map(cb => cb())
             // 清空temp_request

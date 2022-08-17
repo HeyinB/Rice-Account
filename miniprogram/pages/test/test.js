@@ -11,13 +11,23 @@ Page({
 
   async getuser() {
     let id = wx.getStorageSync('id')
-    let data = await require({
+    console.log('-------id---------', id);
+    let a = await require({
       url: 'user/findUserInfo',
       method: 'get',
       data: {
         id
       }
     })
+    console.log('-------a---------', a);
+    let b = await require({
+      url: 'user/findUserInfo',
+      method: 'get',
+      data: {
+        id
+      }
+    })
+    console.log('-------b---------', b);
   },
   async login() {
     wx.login({
@@ -32,8 +42,9 @@ Page({
               ...res
             }
           })
-          wx.setStorageSync('token', data.data.token)
-          wx.setStorageSync('id', data.data.id)
+          console.log('-------data---------', data);
+          wx.setStorageSync('token', data.data.data.token)
+          wx.setStorageSync('id', data.data.data.id)
         } else {
           console.log('登录失败！' + res.errMsg)
         }
