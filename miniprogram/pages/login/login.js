@@ -29,7 +29,7 @@ Page({
                                 console.log('------setStorage---------', res);
                                 getApp().globalData.userInfo = res.data
                                 wx.reLaunch({
-                                    url: '../ledger/ledger'
+                                    url: '../home/home'
                                 })
                             }
                         })

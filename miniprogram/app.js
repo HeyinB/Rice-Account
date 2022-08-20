@@ -22,9 +22,10 @@ App({
             success: (res) => {
                 if (res) {
                     this.globalData.userInfo = res.data
-                    // wx.reLaunch({
-                    //     url: '/pages/ledger/ledger'
-                    // })
+                    console.log(this.globalData.userInfo,'this.globalData.userInfo')
+                    wx.reLaunch({
+                        url: '/pages/home/home'
+                    })
                 }
             }
         })

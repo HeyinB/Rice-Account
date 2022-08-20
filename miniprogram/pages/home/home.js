@@ -33,14 +33,14 @@ Page({
     },
     async getBillData() {
 
-        let { result } = await vxCloud('getBill')
+        // let { result } = await vxCloud('getBill')
         // console.log('result', result)
-        let list = this.formatPrice(result.data)
+        // let list = this.formatPrice(result.data)
 
-        this.setData({
-            BillList: list,
-            total: result.total,
-        })
+        // this.setData({
+        //     BillList: list,
+        //     total: result.total,
+        // })
     },
 
     formatPrice(Data) {
@@ -91,7 +91,6 @@ Page({
         console.log('-------this,---------', this.data.modalName);
     },
     hideModal(e) {
-        console.log('-------hideModal--------');
         this.setData({
             modalName: null
         })
@@ -101,7 +100,7 @@ Page({
         this.scrollLeft = (e.currentTarget.dataset.id - 1) * 60
     },
     async getUser(){
-        let res = await request('http://localhost:5000/v1/user/findUserData')
+        let res = await request({url:'user/findUserInfo',data:{id:14}})
         console.log(res)
     }
 })
