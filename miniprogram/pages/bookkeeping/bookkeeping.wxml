@@ -3,12 +3,12 @@
     <view class="icon-box" bindtap="showKeyboard">
         <view class="grid margin-bottom text-center col-1">
             <view class="grid margin-bottom text-center col-4">
-                <view class="padding" wx:for="{{iconList}}" wx:key="item" data-id="{{item._id}}">
-                    <view class="icon-img" data-name="{{item.iconname}}" data-id="{{item._id}}" style="margin:auto;">
-                        <span class="iconfont {{item.iconclass}}" data-name="{{item.iconname}}" data-id="{{item._id}}"></span>
+                <view class="padding" wx:for="{{iconList}}" wx:key="item" data-id="{{item.id}}">
+                    <view class="icon-img" data-name="{{item.icon_name}}" data-id="{{item.id}}" style="margin:auto;">
+                        <span class="iconfont {{item.icon_class}}" data-name="{{item.icon_name}}" data-id="{{item.id}}"></span>
                     </view>
-                    <view class="icon-text" data-name="{{item.iconname}}" data-id="{{item._id}}" style="margin:auto;">
-                        {{item.iconname}}
+                    <view class="icon-text" data-name="{{item.icon_name}}" data-id="{{item.id}}" style="margin:auto;">
+                        {{item.icon_name}}
                     </view>
                 </view>
             </view>

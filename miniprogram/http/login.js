@@ -16,6 +16,6 @@ const loginReq = async (model) => {
 }
 
 
-export {
+module.exports = {
   loginReq
 }

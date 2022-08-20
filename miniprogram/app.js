@@ -22,7 +22,6 @@ App({
             success: (res) => {
                 if (res) {
                     this.globalData.userInfo = res.data
-                    console.log(this.globalData.userInfo,'this.globalData.userInfo')
                     wx.reLaunch({
                         url: '/pages/home/home'
                     })

@@ -6,10 +6,10 @@ let temp_request = [],
   is_freshing = false;
 
 async function require({ url, data, method = "GET" }) {
+
   url = baseUrl + url;
   let params_ = arguments;
-  let userInfo = await getStorageFun('userInfo') || {}
-
+  let userInfo = await getStorageFun('userInfo') 
   return new Promise((resolve, reject) => {
     wx.request({
       url,
@@ -17,7 +17,7 @@ async function require({ url, data, method = "GET" }) {
       method,
       header: {
         "content-type": "application/json", // 默认值
-        authorization: userInfo.token,
+        authorization: userInfo?userInfo.token:''
       },
       async success(res) {
         // if(data.code === 200) resolve(res)
@@ -30,6 +30,7 @@ async function require({ url, data, method = "GET" }) {
               //刷新token
               await refresh();
             }
+            console.log('token过期了')
             resolve(
               new Promise((reslove) => {
                 temp_request.push(() => {
@@ -54,7 +55,7 @@ async function refresh() {
   wx.login({
     async success(res) {
 
-      let userInfo = await getStorageFun('userInfo') || {}
+      let userInfo = await getStorageFun('userInfo')
 
       let { data } = await require({
         url: "login/refreshToken",
@@ -62,7 +63,7 @@ async function refresh() {
         data: { id: userInfo.id },
       });
 
-      await setStorageFun("userInfo",data)
+      await setStorageFun("userInfo",data.data)
       is_freshing = false;
       temp_request.map((cb) => cb());
       // 清空temp_request
