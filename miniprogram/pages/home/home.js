@@ -3,8 +3,8 @@ const app = getApp();
 
 import request from "../../utils/request";
 import { DAY_FROMAT } from "../../utils/day";
-
-import {getBill} from '../../http/home'
+import { getBill } from "../../http/home";
+import {setStorageFun} from "../../utils/storageFun"
 
 Page({
   /**
@@ -39,8 +39,16 @@ Page({
 
     let { data } = await getBill({ id, openid: user_openid });
 
-    console.log('-------getBillData-----',data);
-    
+    if (data.code === 200) {
+      setStorageFun('ledgerInfo',data.data.ledgerInfo)
+      let BillList = this.formatPrice(data.data.billInfo)
+      this.setData({
+        BillList,
+        ledgerInfo: data.data.ledgerInfo,
+      });
+
+    }
+
     // let { result } = await vxCloud('getBill')
     // console.log('result', result)
     // let list = this.formatPrice(result.data)
@@ -52,36 +60,7 @@ Page({
   },
 
   formatPrice(Data) {
-    let List = [];
-    let sum = 0;
-    Data.forEach((e) => {
-      sum += Number(e.price);
-      let index = List.findIndex((item) => {
-        return item.date_unix === e.date_unix;
-      });
-      let info = {
-        cdata: DAY_FROMAT(e.create_date, "MM-DD HH:mm:ss"),
-        iconclass: e.classInfo[0].iconclass,
-        iconname: e.classInfo[0].iconname,
-        ...e,
-      };
-      if (index === -1) {
-        List.push({
-          date_unix: e.date_unix,
-          lumpSum: Number(e.price),
-          mdata: DAY_FROMAT(e.date_unix, "MM-DD"),
-          list: [info],
-        });
-      } else {
-        List[index].lumpSum += Number(e.price);
-        List[index].list.push(info);
-      }
-    });
-    this.setData({
-      sumPrice: sum.toFixed(2),
-      avgSum: (sum.toFixed(2) / Data.length).toFixed(2),
-    });
-    return List;
+    console.log('-------Data-----',Data);
   },
   tostatistics() {
     // wx.navigateTo({
@@ -89,7 +68,6 @@ Page({
     // })
   },
   showModal(e) {
-
     this.setData({
       modalName: e.currentTarget.dataset.target,
     });

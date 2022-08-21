@@ -20,8 +20,7 @@ Page({
             userInfo.code = res.code;
 
             let data = await loginReq(userInfo);
-
-            console.log(data,'登录')
+            
             if (data) {
               await setStorageFun("userInfo", data);
               setTimeout(()=>{

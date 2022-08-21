@@ -8,6 +8,15 @@ const getOwnClassIcon = async (data) => {
   });
 };
 
+const setBill = async (data)=>{
+  return await require({
+    url:'bill/setBill',
+    method:'POST',
+    data
+  })
+}
+
 module.exports = {
   getOwnClassIcon,
+  setBill
 };

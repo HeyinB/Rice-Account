@@ -8,19 +8,20 @@ Page({
     iconList: [],
     keyyboardShow: false,
     isShow: 1,
-    id: null,
+    classid: null,
+    iconclass:null
   },
   onLoad() {
     this.getIconfont();
   },
   showKeyboard(e) {
-    const { id, name } = e.target.dataset;
-
+    const { id, name,iclass } = e.target.dataset;
     if (id && name) {
       this.setData({
         keyyboardShow: true,
         isShow: 2,
-        id,
+        classid:id,
+        iconclass:iclass
       });
     } else {
       this.closeKeyboard();
@@ -45,7 +46,7 @@ Page({
     setTimeout(() => {
       this.setData({
         keyyboardShow: false,
-        id: null,
+        classid: null,
       });
     }, 1000);
   },

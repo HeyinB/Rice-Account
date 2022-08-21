@@ -4,10 +4,10 @@
         <view class="grid margin-bottom text-center col-1">
             <view class="grid margin-bottom text-center col-4">
                 <view class="padding" wx:for="{{iconList}}" wx:key="item" data-id="{{item.id}}">
-                    <view class="icon-img" data-name="{{item.icon_name}}" data-id="{{item.id}}" style="margin:auto;">
-                        <span class="iconfont {{item.icon_class}}" data-name="{{item.icon_name}}" data-id="{{item.id}}"></span>
+                    <view class="icon-img" data-name="{{item.icon_name}}" data-iclass="{{item.icon_class}}" data-id="{{item.id}}" style="margin:auto;">
+                        <span class="iconfont {{item.icon_class}}" data-name="{{item.icon_name}}" data-iclass="{{item.icon_class}}" data-id="{{item.id}}"></span>
                     </view>
-                    <view class="icon-text" data-name="{{item.icon_name}}" data-id="{{item.id}}" style="margin:auto;">
+                    <view class="icon-text" data-name="{{item.icon_name}}" data-iclass="{{item.icon_class}}" data-id="{{item.id}}" style="margin:auto;">
                         {{item.icon_name}}
                     </view>
                 </view>
@@ -15,6 +15,6 @@
         </view>
     </view>
     <view>
-        <keyboard wx:if="{{keyyboardShow}}" isShow="{{isShow}}" id="{{id}}" bindcloseKeyboard="closeKeyboard" />
+        <keyboard wx:if="{{keyyboardShow}}" isShow="{{isShow}}" classid="{{classid}}" iconclass="{{iconclass}}" bindcloseKeyboard="closeKeyboard" />
     </view>
 </view>
