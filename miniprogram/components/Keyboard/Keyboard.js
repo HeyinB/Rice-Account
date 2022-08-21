@@ -10,6 +10,7 @@ Component({
     isShow: Number,
     classid: Number,
     iconclass: String,
+    iconname:String
   },
   data: {
     loadModal: false,
@@ -198,6 +199,7 @@ Component({
       bill_Data.bill_ledger = ledgerInfo.id;
       bill_Data.openid = userInfo.user_openid;
       bill_Data.userid = userInfo.id;
+      bill_Data.bill_iconname = dataInof.iconname
 
       // let { result } = await vxCloud('setBill', bill_Data)
 

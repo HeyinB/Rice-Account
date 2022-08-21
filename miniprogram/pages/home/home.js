@@ -42,6 +42,8 @@ Page({
     if (data.code === 200) {
       setStorageFun('ledgerInfo',data.data.ledgerInfo)
       let BillList = this.formatPrice(data.data.billInfo)
+      console.log('-------BillList-----',BillList);
+      
       this.setData({
         BillList,
         ledgerInfo: data.data.ledgerInfo,
@@ -61,6 +63,40 @@ Page({
 
   formatPrice(Data) {
     console.log('-------Data-----',Data);
+    
+    let List = [];
+    let sum = 0;
+    Data.forEach((e) => {
+      sum += Number(e.bill_price);
+      let index = List.findIndex((item) => {
+        return item.bill_datetime === e.bill_datetime;
+      });
+
+      console.log('-------index-----',index);
+      
+      let info = {
+        cdata: DAY_FROMAT(e.bill_createtime, "MM-DD HH:mm:ss"),
+        iconclass: e.bill_iconclass,
+        // iconname: e.classInfo[0].iconname,
+        ...e,
+      };
+      if (index === -1) {
+        List.push({
+          bill_datetime: e.bill_datetime,
+          lumpSum: Number(e.bill_price),
+          mdata: DAY_FROMAT(e.bill_datetime, "MM-DD"),
+          list: [info],
+        });
+      } else {
+        List[index].lumpSum += Number(e.bill_price);
+        List[index].list.push(info);
+      }
+    });
+    this.setData({
+      sumPrice: sum.toFixed(2),
+      avgSum: (sum.toFixed(2) / Data.length).toFixed(2),
+    });
+    return List;
   },
   tostatistics() {
     // wx.navigateTo({

@@ -15,6 +15,6 @@
         </view>
     </view>
     <view>
-        <keyboard wx:if="{{keyyboardShow}}" isShow="{{isShow}}" classid="{{classid}}" iconclass="{{iconclass}}" bindcloseKeyboard="closeKeyboard" />
+        <keyboard wx:if="{{keyyboardShow}}" isShow="{{isShow}}" classid="{{classid}}" iconclass="{{iconclass}}" iconname="{{iconname}}" bindcloseKeyboard="closeKeyboard" />
     </view>
 </view>

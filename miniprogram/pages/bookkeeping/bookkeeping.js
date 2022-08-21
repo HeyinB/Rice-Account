@@ -9,19 +9,22 @@ Page({
     keyyboardShow: false,
     isShow: 1,
     classid: null,
-    iconclass:null
+    iconclass:null,
+    iconname:null
   },
   onLoad() {
     this.getIconfont();
   },
   showKeyboard(e) {
     const { id, name,iclass } = e.target.dataset;
+    
     if (id && name) {
       this.setData({
         keyyboardShow: true,
         isShow: 2,
         classid:id,
-        iconclass:iclass
+        iconclass:iclass,
+        iconname:name
       });
     } else {
       this.closeKeyboard();
