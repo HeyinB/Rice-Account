@@ -1,14 +1,14 @@
 // pages/details/details.js
-import vxCloud from '../../utils/vxCloud'
-import { DAY_UNIX } from '../../utils/day.js'
+// import vxCloud from '../../utils/vxCloud'
+import { getBillById } from "../../http/home";
+import { DAY_UNIX } from "../../utils/day.js";
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    id: '',
-    billInfo: {}
+    id: "",
+    billInfo: {},
   },
 
   /**
@@ -16,24 +16,26 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      id: options.id
-    })
+      id: options.id,
+    });
   },
   onReady() {
-    this.getDetails()
+    this.getDetails();
   },
   async getDetails() {
+    // let { result } = await vxCloud('getDetails', { id: this.data.id })
 
-    let { result } = await vxCloud('getDetails', { id: this.data.id })
+    let { data } = await getBillById({ id: this.data.id });
 
-    if(result){
-      result.cdata = DAY_UNIX(result.create_date)
+    console.log('-------data-----',data);
+
+    
+    if (data.code === 200) {
+      data.data.cdata = DAY_UNIX(data.data[0].create_date);
     }
     this.setData({
-      billInfo: result
-    })
+      billInfo: data.data[0],
+    });
   },
-  async delete(){
-    
-  }
-})
+  async delete() {},
+});

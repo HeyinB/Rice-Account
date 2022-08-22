@@ -11,7 +11,17 @@ const getBill = async (model) => {
   })
 }
 
+const getBillById = async (model) =>{
+  return await require({
+    url:'bill/getBillById',
+    data:{
+      ...model
+    }
+  })
+}
+
 
 module.exports = {
-    getBill
+    getBill,
+    getBillById
 }

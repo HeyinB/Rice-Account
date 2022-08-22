@@ -1,6 +1,0 @@
-<!--pages/test/test.wxml-->
-<text>pages/test/test.wxml</text>
-
-<button bindtap="login">登录</button>
-
-<button bindtap="getuser">获取用户信息</button>

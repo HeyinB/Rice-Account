@@ -1,42 +1,21 @@
-<!-- <view class="daily-card"> -->
-	<!-- <CardHeader lumpSum="{{info.lumpSum || 0}}" mdata="{{info.mdata}}" /> -->
-	<!-- <view class="price-content">
-		<view class="price-content-item" wx:for="{{info.list}}" wx:key="_id" data-id="{{item._id}}" bindtap="toDetailPage">
-			<view class="price-content-item-left">
-				<view class="icon iconfont {{item.iconclass}}" />
-				<view class="data">
-					<view class="title">
-						<text>{{item.iconname}}</text>
-						<text>-</text>
-						<text>{{item.remark}}</text>
-					</view>
-					<view class="time">{{item.cdata}}</view>
-				</view>
-			</view>
-			<view class="price-content-item-right">
-				<text>-{{item.price}}</text>
-			</view>
-		</view>
-	</view>
-</view> -->
 
 <view class="LedgerCard">
 	<view class="header">
 		<view class="header-left">
-			<view class="date">{{info.mdata}}</view>
+			<view class="date">{{info.time}}</view>
 		</view>
 		<view class="header-right">
 			<view class="receive">收：0</view>
-			<view class="pay">支：{{info.lumpSum || 0}}</view>
+			<view class="pay">支：{{info.sum || 0}}</view>
 		</view>
 	</view>
 	<view class="billBox">
 		<view class="billList">
-			<view class="viewItem" wx:for="{{info.list}}" wx:key="_id" data-id="{{item._id}}" bindtap="toDetailPage">
+			<view class="viewItem" wx:for="{{info.List}}" wx:key="id" data-id="{{item.id}}" bindtap="toDetailPage">
 				<view class="viewItem-left">
-					<view class="icon iconfont {{item.iconclass}}"></view>
+					<view class="icon iconfont {{item.bill_iconclass}}"></view>
 					<view class="billInfo">
-						<view class="billType">{{item.bill_iconname}}<text wx:if="{{item.remark}}">--</text>{{item.bill_remark}}</view>
+						<view class="billType">{{item.bill_iconname}}<text wx:if="{{item.bill_remark}}">--</text>{{item.bill_remark}}</view>
 						<view class="billTime">{{item.cdata}}</view>
 					</view>
 				</view>

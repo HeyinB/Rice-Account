@@ -1,41 +1,3 @@
-<!-- 
-    <view class="container">
-      <view class="header">
-        <view class="header-container">
-        <view class="h">
-          <view class="title">账单详情</view>
-          <view class="icon">删除</view>
-        </view>
-        <view class="c">
-          <view class="icon iconfont {{billInfo.iconclass}}"></view>
-          <view class="content">
-            <view class="left">
-              <view class="title"><span>{{billInfo.iconname}}</span></view>
-              <view class="time">{{billInfo.cdata}}</view>
-            </view>
-            <view class="right">-￥{{billInfo.price}}</view>
-          </view>
-        </view>
-        </view>
-      </view>
-      <view class="details">
-       <view class="details-container">
-        <view class="row">
-          <view class="label">账本类型</view>
-          <view class="value">普通账单</view>
-        </view>
-        <view class="row">
-          <view class="label">记账人</view>
-          <view class="value">于丹</view>
-        </view>
-        <view class="row">
-          <view class="label">备注</view>
-          <view class="value">{{billInfo.remark}}</view>
-        </view>
-       </view>
-      </view>
-      <view class="btn"><view>编辑账单</view></view>
-    </view> -->
 
     <view class="container">
       <view class="container-top">
@@ -43,13 +5,13 @@
         <view class="detail-middle">
           <view class="top">
             <view class="detail-icon">
-              <view class="icon iconfont {{billInfo.iconclass}}"></view>
+              <view class="icon iconfont {{billInfo.bill_iconclass}}"></view>
             </view>
-            <view class="detail-name">{{billInfo.iconname}}</view>
-            <view class="remake">{{billInfo.remark}}</view>
+            <view class="detail-name">{{billInfo.bill_iconname}}</view>
+            <view class="remake">{{billInfo.bill_remark}}</view>
           </view>
           <view class="midel">
-            <view class="price">-{{billInfo.price}}</view>
+            <view class="price">-{{billInfo.bill_price}}</view>
             <view class="time">{{billInfo.cdata}}</view>
           </view>
         </view>

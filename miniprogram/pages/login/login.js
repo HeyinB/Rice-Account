@@ -23,6 +23,7 @@ Page({
             
             if (data) {
               await setStorageFun("userInfo", data);
+              app.globalData.userInfo = data
               setTimeout(()=>{
                 wx.reLaunch({
                   url: "../home/home",

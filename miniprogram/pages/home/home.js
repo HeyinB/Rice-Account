@@ -4,99 +4,101 @@ const app = getApp();
 import request from "../../utils/request";
 import { DAY_FROMAT } from "../../utils/day";
 import { getBill } from "../../http/home";
-import {setStorageFun} from "../../utils/storageFun"
+import { getStorageFun } from "../../utils/storageFun";
 
 Page({
   /**
    * 页面的初始数据
    */
   data: {
+    show:false,
+    ledger_name: "",
     scrollViewHeight: "",
+    ledgetDataList: [],
     BillList: [],
-    sumPrice: 0,
-    avgSum: 0,
-    nowDate: "",
-    dateMsg: "",
-    total: "",
-    modalName: null,
+    budgerInfo: {
+      sumBudert: 0,
+      sum: 0,
+      lave: 0,
+      percen: 0,
+    },
+  },
+  onHide(){
+    this.setData({
+      show:false
+    })
   },
   onShow() {
     wx.hideHomeButton();
-    // this.setData({
-    //     BillList: [],
-    //     total: 0,
-    // })
     this.getBillData();
-    // this.getUser();
+    this.setData({
+      show:true
+    })
   },
   onLoad: function (options) {
     wx.hideHomeButton();
   },
   async getBillData() {
-    //获取账单
-    let { userInfo } = app.globalData;
-    let { id, user_openid } = userInfo;
+    const { userInfo } = app.globalData;
 
-    let { data } = await getBill({ id, openid: user_openid });
-
+    let { data } = await getBill({
+      id: userInfo.id,
+      openid: userInfo.user_openid,
+    });
     if (data.code === 200) {
-      setStorageFun('ledgerInfo',data.data.ledgerInfo)
-      let BillList = this.formatPrice(data.data.billInfo)
-      console.log('-------BillList-----',BillList);
-      
-      this.setData({
-        BillList,
-        ledgerInfo: data.data.ledgerInfo,
-      });
+      let { billInfo, ledgetDataList } = data.data;
+      let { BillList, sumBudert } = this.formatPrice(billInfo);
 
-    }
+      let { budget } = await getStorageFun("userInfo");
+      let { ledger_name } = await getStorageFun("ledgerInfo");
 
-    // let { result } = await vxCloud('getBill')
-    // console.log('result', result)
-    // let list = this.formatPrice(result.data)
+      let lave = (budget - sumBudert).toFixed(2) > 0 ? budget - sumBudert : 0;
+      let percen =
+        ((lave * 100) / budget).toFixed(2) > 0 ? ((lave * 100) / budget).toFixed(2) : 0;
 
-    // this.setData({
-    //     BillList: list,
-    //     total: result.total,
-    // })
-  },
-
-  formatPrice(Data) {
-    console.log('-------Data-----',Data);
-    
-    let List = [];
-    let sum = 0;
-    Data.forEach((e) => {
-      sum += Number(e.bill_price);
-      let index = List.findIndex((item) => {
-        return item.bill_datetime === e.bill_datetime;
-      });
-
-      console.log('-------index-----',index);
-      
-      let info = {
-        cdata: DAY_FROMAT(e.bill_createtime, "MM-DD HH:mm:ss"),
-        iconclass: e.bill_iconclass,
-        // iconname: e.classInfo[0].iconname,
-        ...e,
+      let budgerInfo = {
+        sumBudert,
+        sum: budget,
+        lave,
+        percen,
       };
-      if (index === -1) {
-        List.push({
-          bill_datetime: e.bill_datetime,
-          lumpSum: Number(e.bill_price),
-          mdata: DAY_FROMAT(e.bill_datetime, "MM-DD"),
-          list: [info],
-        });
+
+      console.log("-------budgerInfo-----", (budget - sumBudert).toFixed(2) < 0);
+
+      this.setData({
+        ledger_name,
+        BillList,
+        ledgetDataList,
+        budgerInfo,
+      });
+    }
+  },
+  formatPrice(billInfo) {
+    let BillList = [],
+      sumBudert = 0;
+    billInfo.forEach((e) => {
+      sumBudert += Number(e.bill_price);
+      let i = BillList.findIndex(
+        (val) => e.bill_datetime === val.bill_datetime
+      );
+      if (i === -1) {
+        let item = { sum: 0 };
+        item.bill_datetime = e.bill_datetime;
+        item.time = DAY_FROMAT(e.bill_datetime, "YYYY-MM-DD");
+        e.time = DAY_FROMAT(e.bill_datetime, "HH:mm");
+        item.sum = Number(item.sum) + Number(e.bill_price);
+        item.List = [];
+        item.List.push(e);
+
+        BillList.push(item);
       } else {
-        List[index].lumpSum += Number(e.bill_price);
-        List[index].list.push(info);
+        BillList[i].List.push(e);
       }
     });
-    this.setData({
-      sumPrice: sum.toFixed(2),
-      avgSum: (sum.toFixed(2) / Data.length).toFixed(2),
-    });
-    return List;
+
+    console.log("-------BillList-----", BillList);
+
+    return { BillList, sumBudert };
   },
   tostatistics() {
     // wx.navigateTo({

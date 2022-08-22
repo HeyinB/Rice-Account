@@ -1,20 +1,18 @@
 <view class="homeChartBox" bindtap="toBudget">
-
-    <view class="chart"><Homechart></Homechart></view>
-    <view class="budget">
-        <view class="budgetBox">
-            <view class="title">我的预算  ·</view>
-            <view class="info">
-                <view class="row">
-                    <view class="lable">总预算</view>
-                    <view class="value">8500</view>
-                </view>
-                <view class="row">
-                    <view class="lable">剩余预算</view>
-                    <view class="value">5952.3</view>
-                </view>
-            </view>
+  <view class="chart"><Homechart percen="{{budgerInfo.percen}}"></Homechart></view>
+  <view class="budget">
+    <view class="budgetBox">
+      <view class="title">我的预算 ·</view>
+      <view class="info">
+        <view class="row">
+          <view class="lable">总预算</view>
+          <view class="value">{{ budgerInfo.sum }}</view>
         </view>
+        <view class="row">
+          <view class="lable">剩余预算</view>
+          <view class="value">{{ budgerInfo.lave }}</view>
+        </view>
+      </view>
     </view>
-
+  </view>
 </view>

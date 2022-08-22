@@ -20,11 +20,11 @@
             <view class="header">
               <view class="expenditure">
                 <view class="payout-text">本月支出（元）</view>
-                <view class="payout">{{ sumPrice }}</view>
+                <view class="payout">{{ budgerInfo.sumBudert }}</view>
               </view>
     
               <view class="bill"  bindtap="showModal"  data-target="viewModal">
-                <view>生活账单</view>
+                <view>{{ledger_name}}</view>
               </view>
             </view>
     
@@ -38,7 +38,7 @@
                 <view class="value">18132.04</view>
               </view>
             </view>
-            <view class="footer"> <HomeBox></HomeBox> </view>
+            <view class="footer" wx:if="{{show}}"> <HomeBox budgerInfo="{{budgerInfo}}"></HomeBox> </view>
           </view>
           <view>
             <view wx:for="{{ BillList }}" wx:key="item">
@@ -57,9 +57,9 @@
 		</view>
 		<scroll-view scroll-y class="DrawerWindow {{modalName=='viewModal'?'show':''}}">
 			<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg">
-				<view class="cu-item arrow">
+				<view class="cu-item arrow" wx:for="{{ledgetDataList}}" wx:key="id">
 					<view class="content">
-						<text class="text-grey">45555</text>
+						<text class="text-grey">{{item.ledger_name}}</text>
 					</view>
 				</view>
 			</view>

@@ -5,7 +5,9 @@ Component({
   /**
    * 组件的属性列表
    */
-  properties: {},
+  properties: {
+    percen:Number
+  },
   data: {
     ec: {
       onInit: function initChart(canvas, width, height, dpr) {
@@ -26,11 +28,12 @@ Component({
   },
   methods: {
     setOption() {
+      let {percen} = this.data
       let option = {
         backgroundColor: "transparent",
         title: [
           {
-            text: "75%剩余",
+            text: `${percen}%剩余`,
             x: "45%",
             y: "43%",
             textAlign: "center",
@@ -74,7 +77,7 @@ Component({
             backgroundStyle: {
               color: "#464451",
             },
-            data: [75],
+            data: [percen],
             coordinateSystem: "polar",
             itemStyle: {
               normal: {
@@ -104,7 +107,7 @@ Component({
               show: false,
               lineStyle: {
                 color: [
-                  [0.7, "#fff"],
+                  [percen/100, "#fff"],
                   [1, "#293041"],
                 ],
               },

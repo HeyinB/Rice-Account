@@ -1,6 +1,8 @@
 
 import {getStorageFun,setStorageFun} from './storageFun'
 
+// prourl = 'http://47.97.214.217:5000/v1/'
+// http://localhost:5000/v1/
 const baseUrl = "http://localhost:5000/v1/";
 let temp_request = [],
   is_freshing = false;
